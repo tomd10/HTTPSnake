@@ -62,7 +62,7 @@
         <Button
             Text="Fetch" 
             Clicked="OnFetchClicked"
-            />
+            Margin="10" />
 
 
         <Label 
