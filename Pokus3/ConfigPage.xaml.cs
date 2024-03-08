@@ -20,8 +20,8 @@ public partial class ConfigPage : ContentPage
 		string HTTPResponse = "";
 		try
 		{
-            HTTPResponse = await Networking.GetResponse("https://kraken.pedf.cuni.cz/~chabadat/easy.txt");
-            //HTTPResponse = await Networking.GetResponse(URL);
+            //HTTPResponse = await Networking.GetResponse("https://kraken.pedf.cuni.cz/~chabadat/easy.txt");
+            HTTPResponse = await Networking.GetResponse(URL);
         }
 		catch
 		{
