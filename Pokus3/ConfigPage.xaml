@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pokus3.ConfigPage"
+             Title="Configuration page">
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Label 
+            Text="Current state:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="25"
+                Margin="10"/>
+
+            <Label 
+            x:Name="labelConfigured"
+            Text="Unconfigured"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="30"
+            Margin="10"/>
+        </HorizontalStackLayout>
+
+        <Label 
+            Text="Configuration parameters: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            FontSize="25"
+            Margin="10"/>
+        <Label 
+            Text="URL: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            FontSize="20"
+            Margin="10"/>
+        <Entry 
+            x:Name="entryURL" 
+            Placeholder="" 
+            FontSize="20" 
+            BackgroundColor="LightGray" 
+            Margin="10"/>
+        <Label 
+            Text="Difficulty: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            FontSize="20"
+            Margin="10"/>
+        <Picker 
+            x:Name="pickerDifficulty"
+            Title="Select your difficulty"
+            BackgroundColor="LightGray"
+            Margin="10">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Easy</x:String>
+                    <x:String>Normal</x:String>
+                    <x:String>Hard</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button
+            Text="Fetch" 
+            Clicked="OnFetchClicked"
+            />
+
+
+        <Label 
+            Text="Swipe control: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            FontSize="20"
+            Margin="10"/>
+        <Switch 
+            x:Name="switchControl" 
+            Toggled="OnControlToggle" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            IsToggled="false"
+            OnColor="Green"
+            ThumbColor="Black"
+            Margin="10"/>
+
+        <Label 
+            Text="Easy mode: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            FontSize="20"
+            Margin="10"/>
+        <Switch 
+            x:Name="switchEasy" 
+            Toggled="OnEasyToggle" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            IsToggled="false"
+            OnColor="Green"
+            ThumbColor="Black"
+            Margin="10"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
